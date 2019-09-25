@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+  </head>
+  <body>
+    <video
+      autoplay="autoplay"
+      loop
+      class="videoPreviewEl"
+      src="https://cw.phncdn.com/videos/201812/30/199312471/180P_225K_199312471.webm?lqDNmdy7tdY3v-Mzu2AAso-anCTe1npTD1FIXeQMHiY-qmYL2PF0srVdwQ5v_GwIA_ZNwocom4rC-pKGBmnQo6rcsGcuebGk1kCjqnwnQgPBAMr8VvymWZYYPkcGIeKTAMns3DIoA-9FKFY9uPBRUIQXMuCLMoWK49nPk8ZPNITlvTSO1CdjshRzxKfLw1cnmCfCJalSKfo"
+      poster="https://ci.phncdn.com/videos/201812/30/199312471/original/(m=q4XTYIUbecuKGgaaaa)(mh=c_YXVnCB9Uo3VS9D)0.jpg"
+    ></video>
+
+    <script>
+      $(document).ready(function() {
+        $('video')
+          .prop('muted', true)
+          .play()
+      })
+    </script>
+  </body>
+</html>

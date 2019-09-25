@@ -1,0 +1,156 @@
+#mobileHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  -webkit-transition: 0.2s -webkit-transform linear;
+  transition: 0.2s transform linear;
+  color: #f90;
+  height: 48px;
+}
+
+#mobileHeader.scroll {
+  position: fixed;
+}
+
+#mobileHeader.active {
+  position: absolute;
+  z-index: 151;
+}
+
+#mobileHeader.jsHeaderHidden {
+  transform: translateY(-100%);
+}
+
+#mobileHeader nav {
+  width: 100%;
+  height: 48px;
+}
+
+#mobileHeader nav .topNav {
+  height: 48px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #111;
+  position: relative;
+}
+
+button {
+  background-image: none;
+}
+
+#mobileHeader nav .topNav button {
+  padding: 0;
+  border: 0;
+}
+
+#mobileHeader nav button#mobileNavigation {
+  width: 55px;
+  height: 47px;
+  background-color: #1e1e1e;
+  border-right: 1px solid #111;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#mobileHeader nav button#mobileNavigation.active {
+  background-color: #111;
+}
+
+#mobileHeader nav button#mobileNavigation i {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 303px 287px;
+  width: 32px;
+  height: 21px;
+  background-position: -160px -24px;
+}
+
+#mobileHeader nav button#mobileNavigation.active i {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 303px 287px;
+  width: 32px;
+  height: 21px;
+  background-position: -160px -1px;
+}
+
+#mobileHeader nav button#mobileNavigation i {
+  background-image: url('../images/vmobile/sprites/sprite-common@2x.png?cache=2019091903');
+}
+
+#mobileHeader nav button#mobileNavigation.active i {
+  background-image: url('../images/vmobile/sprites/sprite-common@2x.png?cache=2019091903');
+}
+
+i {
+  display: block;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: '';
+}
+
+.logoWrapper {
+  color: white;
+  height: 48px;
+  line-height: 48px;
+  font-size: 19px;
+}
+
+aside#leftMenu {
+  width: 221px;
+  background: #1e1e1e;
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: -221px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 19;
+}
+
+aside#leftMenu.active {
+  left: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 150;
+}
+
+.uiOverlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 18;
+}
+
+.uiOverlay.active {
+  display: block;
+}
+
+.navigation {
+  width: 100%;
+  height: 47px;
+  // background-color: #ac0e63;
+  position: fixed; /* 绝对定位（根据游览器边框定位） */
+  left: 0;
+  top: 0;
+  transition: top 0.5s; /* 动画效果，top：显示的效果， 1s：是效果产生所花费的时间*/
+}
+
+.hide {
+  top: -57px;
+}

@@ -1,0 +1,118 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+  background-color: #333;
+}
+
+.ulContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.mainContainer {
+  padding-top: 46px;
+  min-height: calc(100% - 46px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.labelItem {
+  height: 38px;
+  padding: 9px 0px 9px 38px;
+  text-align: start;
+  color: #ccc;
+  border-bottom: 1px solid #111;
+  font-size: 0.9em;
+  &.actived {
+    color: #f90;
+  }
+}
+
+#root {
+  position: relative;
+}
+
+@import './bootstrap.css';
+@import './default.scss';
+@import './videos.scss';
+@import './pay.scss';
+@import './footer.scss';
+@import './header.scss';
+
+.helpCenter {
+  position: fixed;
+  right: 15px;
+  top: 380px;
+  z-index: 1000;
+  // bottom: 12px;
+}
+
+.u-userLauncherColor {
+  box-shadow: none;
+  background-color: #f90 !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  padding: 7px;
+  border-radius: 999rem;
+  bottom: 0;
+  letter-spacing: 0.6;
+  border: none !important;
+  font-weight: 700;
+  margin: 0;
+  min-width: 100%;
+  table-layout: auto;
+  cursor: pointer !important;
+}
+
+.classSpan {
+  vertical-align: middle;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: inline-block !important;
+  max-width: 100%;
+  padding: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  letter-spacing: 0.6;
+  font-size: 1.07143rem;
+  white-space: nowrap !important;
+  text-align: left !important;
+  height: 20px;
+  width: 20px;
+}
+
+
+.wrapperHelp {
+  position: relative;
+  .contentHelp {
+    position: absolute;
+    padding-left: 15px;
+    display: none;
+    text-align: start;
+    .contentItem {
+      margin-top: 10px;
+    }
+  }
+  &.actived {
+    .contentHelp {
+      display: inline-block;
+      font-size: 14px;
+      height: 100px;
+      width: 300px;
+      left: -251px;
+      top: -101px;
+      color: #000;
+      background-color: #f90;
+      border-radius: 8px;
+
+    }
+  }
+}
+
+
+
