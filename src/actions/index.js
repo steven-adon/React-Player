@@ -17,17 +17,29 @@ export const saveVideoId = videoItem => async dispatch => {
 export const queryServerPayStatus = () => async (dispatch, getState) => {
   const order_id = getState().videoUuid
   const videoItem = getState().videoItem
-  const response = await fetch.get('/video/order', {
-    params: {
-      orderId: order_id
-    }
+  // const response = await fetch.get('/video/order', {
+  //   params: {
+  //     orderId: order_id
+  //   }
+  // })
+  const response = await fetch.post('/api/queryPayStatus', {
+    order_id: order_id
   })
-  if (response.data) {
-    console.log('路由')
-    if (response.data) {
+
+  console.log(response)
+
+  if(response.hasOwnProperty('pay_status')) {
+    if(response['pay_status'] === '已支付') {
       history.push(`/play/${videoItem.id}`)
     }
   }
+
+  // if (response.data) {
+  //   console.log('路由')
+  //   if (response.data) {
+  //     history.push(`/play/${videoItem.id}`)
+  //   }
+  // }
 }
 
 // 获取支付二维码
