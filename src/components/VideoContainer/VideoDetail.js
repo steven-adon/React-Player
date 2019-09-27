@@ -34,7 +34,8 @@ class VideoDetail extends React.Component {
         >
           {/* <img className="videoThumb" src={`${baseUrl}/${imgUrl}`} alt="" /> */}
           {/* <img className="videoThumb" src={`https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1`} alt="" /> */}
-          <img className="videoThumb" src={`${baseUrl}/${imgUrl}.gif`} alt="" />
+          {/* <img className="videoThumb" src={`${baseUrl}/${imgUrl}.gif`} alt="" /> */}
+          <img className="videoThumb" src="https://i86.photobucket.com/albums/k108/gengyudong/small-love_zpse6sfq4vx.gif" alt=""></img>
 
           <div className="duration thumbOverlay hideInUserStream">
             <span className="hd-thumbnail">HD</span>
