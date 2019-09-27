@@ -20,7 +20,7 @@ class WeiChatPay extends React.Component {
 
   componentDidMount() {
     // const randomNumber = this.getRandomNum(1, 2) * 0.1
-    const randomNumber = 0.1
+    const randomNumber = Number(this.props.videoItem.price)
     this.setState({
       payMoney: randomNumber
     })
