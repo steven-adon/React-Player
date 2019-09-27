@@ -329,3 +329,31 @@
   border-radius: 3px;
   right: -4px;
 }
+
+.price-cankao {
+  color: #8faf1d;
+  display: flex;
+  margin-top: -2px;
+  align-items: center;
+  width: 28%;
+  font-size: 0.8em;
+  float: left;
+  white-space: nowrap;
+  text-align: left;
+  height: 20%;
+
+  .price-span {
+    margin-top: 5px;
+  }
+}
+
+.pay2Download {
+  margin-top: 3px;
+  margin-right: 4px;
+  background-image: url('../images/price.png');
+  height: 16px;
+  width: 16px;
+  left: 100%;
+  z-index: 10;
+  background-size: 16px 16px;
+}

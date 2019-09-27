@@ -24,7 +24,7 @@ class VideoDetail extends React.Component {
   render() {
     const { videoItem } = this.props
 
-    const { id, views, likes, duration, videoDesc, imgUrl } = videoItem
+    const { id, views, likes, duration, videoDesc, imgUrl, price } = videoItem
 
     return (
       <div className="positionRelative videoWrapper" key={id}>
@@ -55,6 +55,13 @@ class VideoDetail extends React.Component {
           >
             <i />
             <span>{((likes / views) * 100).toFixed(0)}%</span>
+          </div>
+
+          <div
+            className="price-cankao"
+          >
+            <span class="pay2Download"></span>
+            <span className="price-span">参考价:{price} &yen;</span>
           </div>
 
           <div
