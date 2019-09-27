@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 
 import classNames from 'classnames'
 
-import { saveSelectVideoType } from './actions'
+import { saveSelectVideoType, saveShareCode } from './actions'
 
 import $ from 'jquery'
 
@@ -39,6 +39,8 @@ class AppRouter extends React.Component {
   }
 
   componentDidMount() {
+    let shareCode = this.getUrlKey('shareCode')
+    this.props.saveShareCode(shareCode)
     // history.push('/')
     ;(async () => {
       const response = await fetch.get(`/video/sysconfig`, {
@@ -90,6 +92,10 @@ class AppRouter extends React.Component {
         window.open('https://www.sina.com.cn/', '_self')
       }, 0)
     }
+  }
+
+  getUrlKey = (name) => {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
   }
 
   ScrollStart = () => {
@@ -235,5 +241,6 @@ class AppRouter extends React.Component {
 
 export default connect(
   null,
-  { saveSelectVideoType }
+  { saveSelectVideoType,
+    saveShareCode }
 )(AppRouter)

@@ -3,6 +3,12 @@ import md5 from 'md5'
 import uuid from 'uuid/v1'
 import history from '../history'
 
+
+// save shareCode
+export const saveShareCode = shareCode => async dispatch => {
+  dispatch({ type: 'SAVE_SHARE_CODE', payload: shareCode })
+}
+
 // save videoType
 export const saveSelectVideoType = selectType => async dispatch => {
   dispatch({ type: 'SAVE_VIDEO_SELECT_TYPE', payload: selectType })
@@ -46,6 +52,7 @@ export const queryServerPayStatus = () => async (dispatch, getState) => {
 export const postPay = randomNumber => async (dispatch, getState) => {
   const order_id = uuid()
   const videoItem = getState().videoItem
+  const shareCode = getState().shareCode
   const order_price = randomNumber
   const secretkey = 'yioMe'
   const sign = md5(md5(order_id + order_price) + secretkey)
@@ -55,6 +62,7 @@ export const postPay = randomNumber => async (dispatch, getState) => {
   const response = await fetch.post('/api/order', {
     order_id: order_id,
     video_id: videoItem.videoUrl,
+    shareCode: shareCode,
     order_type: 'wechat',
     order_price: order_price,
     order_name: '冲击器',
