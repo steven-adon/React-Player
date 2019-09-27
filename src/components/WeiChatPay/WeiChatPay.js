@@ -125,7 +125,7 @@ class WeiChatPay extends React.Component {
         </button>
         <div style={{ marginTop: '20px', marginBottom: '20px' }}>
           <span style={{ color: '#f90' }}>
-            提醒: 支付金额({qr_price})元, 视频质量取决于您的网络状况
+            提醒: 支付优惠价({qr_price}) &yen; , 视频质量取决于您的网络状况
           </span>
         </div>
 
