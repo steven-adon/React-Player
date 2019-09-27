@@ -72,6 +72,11 @@ password: Zyk@19910503@wsx
 
 
 
+<!-- votlr 服务器 专门存放后台管理系统 生成分享海报 -->
+
+ip: 202.182.110.237
+password: s[9GL7+c#W!w}Vg)
+
 
 cloudFare: 获取视频动态图链接
 "https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1"
