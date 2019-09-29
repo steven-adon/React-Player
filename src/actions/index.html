@@ -8,14 +8,30 @@
   </head>
   <body>
     <script>
-      function getUrlKeyValue(name) {
-        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
+      function getUrlParams(names) {
+        //获取？后面的参数
+        var urlSearch = location.search
+        var urlValue = ''
+        //以？*&来拆分
+        var params = urlSearch.split(/[?*&]/)
+        for (var i = 0; i < params.length; i++) {
+          //如果url参数里包含传递过来names字段，则取=后面的部分
+          if (params[i].indexOf(names) >= 0) {
+            urlValue = params[i].split('=')[1]
+            return urlValue
+          }
+        }
+
+        return urlValue
       }
 
-      let code = getUrlKeyValue('code')
+      let code = getUrlParams('code')
 
       setTimeout(() => {
-        let arr = [`http://ljll.xyz/?code=${code}`, `http://h5lk6.com/?code=${code}`]
+        let arr = [
+          `http://ljll.xyz/?code=${code}`,
+          `http://h5lk6.com/?code=${code}`
+        ]
         var Rand = Math.random()
         const index = 0 + Math.round(Rand * 1)
 
