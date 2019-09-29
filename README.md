@@ -82,5 +82,9 @@ IP：45.76.64.156
 password： Jk@1-K{72qQfm[P9
 
 
+<!-- 转换域名服服务器 vltur服务器-->
+IP: 45.76.202.238
+passoword: -4Tu@MhK?N,RrPg#
+
 cloudFare: 获取视频动态图链接
 "https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1"

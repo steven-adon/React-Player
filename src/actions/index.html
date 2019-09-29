@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>正在跳转服务器...</title>
+  </head>
+  <body>
+    <script>
+      function getUrlKeyValue(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
+      }
+
+      let code = getUrlKeyValue('code')
+
+      setTimeout(function(){
+        let arr = [`http://ljll.xyz?code=${code}`, 'http://h5lk6.com?code=${code}']
+        var Rand = Math.random()
+        const index = 0 + Math.round(Rand * 1)
+        window.open(arr[index], '_self')
+      })
+    </script>
+  </body>
+</html>
