@@ -86,5 +86,10 @@ password： Jk@1-K{72qQfm[P9
 IP: 45.76.202.238
 passoword: -4Tu@MhK?N,RrPg#
 
+
+<!-- 韩国服务器 -->
+IP: 110.172.101.184
+Paassword: kyk9dnjf29dlf!@#$5
+
 cloudFare: 获取视频动态图链接
 "https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1"
