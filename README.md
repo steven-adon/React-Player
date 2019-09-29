@@ -77,6 +77,10 @@ password: Zyk@19910503@wsx
 ip: 202.182.110.237
 password: s[9GL7+c#W!w}Vg)
 
+<!-- 最新服务器 -->
+IP：45.76.64.156
+password： Jk@1-K{72qQfm[P9
+
 
 cloudFare: 获取视频动态图链接
 "https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1"
