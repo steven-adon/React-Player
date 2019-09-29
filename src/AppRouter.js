@@ -96,7 +96,7 @@ class AppRouter extends React.Component {
 
   getUrlParams = (names) => {
     //获取？后面的参数
-    var urlSearch = location.search
+    var urlSearch = window.location.search
     var urlValue = ''
     //以？*&来拆分
     var params = urlSearch.split(/[?*&]/)
