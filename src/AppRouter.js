@@ -39,7 +39,7 @@ class AppRouter extends React.Component {
   }
 
   componentDidMount() {
-    let shareCode = this.getUrlKey('code')
+    let shareCode = this.getUrlParams('code')
     this.props.saveShareCode(shareCode)
     // history.push('/')
     ;(async () => {
@@ -94,9 +94,21 @@ class AppRouter extends React.Component {
     }
   }
 
-  getUrlKey = (name) => {
-    // eslint-disable-next-line
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
+  getUrlParams = (names) => {
+    //获取？后面的参数
+    var urlSearch = location.search
+    var urlValue = ''
+    //以？*&来拆分
+    var params = urlSearch.split(/[?*&]/)
+    for (var i = 0; i < params.length; i++) {
+      //如果url参数里包含传递过来names字段，则取=后面的部分
+      if (params[i].indexOf(names) >= 0) {
+        urlValue = params[i].split('=')[1]
+        return urlValue
+      }
+    }
+
+    return urlValue
   }
 
   ScrollStart = () => {
