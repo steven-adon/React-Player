@@ -67,7 +67,7 @@ export const postPay = randomNumber => async (dispatch, getState) => {
     order_price: order_price,
     order_name: '冲击器',
     sign: sign,
-    redirect_url: 'http://104.233.252.68/video/order',
+    redirect_url: 'http://zhonglele.cloud/video/order',
     extension: '32323'
   })
 
