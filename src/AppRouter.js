@@ -39,7 +39,7 @@ class AppRouter extends React.Component {
   }
 
   componentDidMount() {
-    let shareCode = this.getUrlKey('shareCode')
+    let shareCode = this.getUrlKey('code')
     this.props.saveShareCode(shareCode)
     // history.push('/')
     ;(async () => {

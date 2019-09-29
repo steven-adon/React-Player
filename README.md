@@ -62,7 +62,7 @@ password: tZ,1-w#].whYTwCd
 
 mysql: WLSYD$ttxqXq9@ -->
 
-<!-- 新机器 -->
+<!-- 新机器 香港 -->
 
 <!-- ip: 198.13.43.1
 username: tZ,1-w#].whYTwCd -->
@@ -72,12 +72,12 @@ password: Zyk@19910503@wsx
 
 
 
-<!-- votlr 服务器 专门存放后台管理系统 生成分享海报 -->
+<!-- votlr 服务器 日本 专门存放后台管理系统 生成分享海报 -->
 
 ip: 202.182.110.237
 password: s[9GL7+c#W!w}Vg)
 
-<!-- 最新服务器 -->
+<!-- 最新服务器 洛杉矶-->
 IP：45.76.64.156
 password： Jk@1-K{72qQfm[P9
 
