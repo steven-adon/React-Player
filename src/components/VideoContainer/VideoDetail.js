@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import fetch, { baseUrl } from '../../utils/request'
+import fetch from '../../utils/request'
 import classNames from 'classnames'
 
 import { saveVideoId } from '../../actions'
@@ -61,7 +61,7 @@ class VideoDetail extends React.Component {
           <div
             className="price-cankao"
           >
-            <span class="pay2Download"></span>
+            <span className="pay2Download"></span>
             <span className="price-span">参考价:{price} &yen;</span>
           </div>
 
