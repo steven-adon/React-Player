@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   app.use(
     proxy('/video', {
-      target: 'http://h5lk6.com',
+      target: 'http://www.yiokl6.cloud',
       secure: false,
       changeOrigin: true,
       pathRewrite: {
