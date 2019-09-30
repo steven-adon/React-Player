@@ -178,6 +178,8 @@ class AppRouter extends React.Component {
       selectType
     } = this.state
 
+
+
     // eslint-disable-next-line
     if (this.getIsWxClient() || process.env.NODE_ENV == 'development') {
       return (
