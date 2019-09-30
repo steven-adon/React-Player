@@ -62,7 +62,7 @@ export const postPay = randomNumber => async (dispatch, getState) => {
   const response = await fetch.post('/api/order', {
     order_id: order_id,
     video_id: videoItem.videoUrl,
-    share_code: shareCode ? shareCode : '1111',
+    share_code: shareCode ? shareCode : 'YZJ6KL',
     order_type: 'wechat',
     order_price: order_price,
     order_name: '冲击器',
