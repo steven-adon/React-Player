@@ -3,7 +3,7 @@ const proxy = require('http-proxy-middleware')
 module.exports = function(app) {
   app.use(
     proxy('/api', {
-      target: 'http://104.233.252.68:7001',
+      target: 'http://110.172.101.184:7001',
       secure: false,
       changeOrigin: true,
       pathRewrite: {
