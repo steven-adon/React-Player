@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import fetch from '../../utils/request'
+import fetch, { baseUrl } from '../../utils/request'
 import classNames from 'classnames'
 
 import { saveVideoId } from '../../actions'
@@ -34,8 +34,8 @@ class VideoDetail extends React.Component {
         >
           {/* <img className="videoThumb" src={`${baseUrl}/${imgUrl}`} alt="" /> */}
           {/* <img className="videoThumb" src={`https://videodelivery.net/${imgUrl}/thumbnails/thumbnail.gif?time=5s&duration=3s&height=150&fps=1`} alt="" /> */}
-          {/* <img className="videoThumb" src={`${baseUrl}/${imgUrl}.gif`} alt="" /> */}
-          <img className="videoThumb" src={`https://raw.githubusercontent.com/ImagesLove/Images/master/${imgUrl}.gif`} alt=""></img>
+          <img className="videoThumb" src={`${baseUrl}/${imgUrl}.gif`} alt="" />
+          {/* <img className="videoThumb" src={`https://raw.githubusercontent.com/ImagesLove/Images/master/${imgUrl}.gif`} alt=""></img> */}
 
           <div className="duration thumbOverlay hideInUserStream">
             <span className="hd-thumbnail">HD</span>

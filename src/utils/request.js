@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import { Toast } from 'antd-mobile'
 
-export const baseUrl = 'http://h5lk6.com'
+export const baseUrl = 'http://www.yiokl6.cloud'
 
 //创建axios实例
 const service = axios.create({
