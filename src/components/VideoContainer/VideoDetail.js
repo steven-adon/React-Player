@@ -68,7 +68,7 @@ class VideoDetail extends React.Component {
           <div
             className="channel-icon"
             onClick={
-              Number(id) < 3 ? this.directlyInterVideo : this.goToWeiChatPay
+              Number(id) < 5 ? this.directlyInterVideo : this.goToWeiChatPay
             }
           >
             <i className="producer-icon video-sprite"></i>
