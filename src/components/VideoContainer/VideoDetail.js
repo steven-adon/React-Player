@@ -68,7 +68,7 @@ class VideoDetail extends React.Component {
           <div
             className="channel-icon"
             onClick={
-              Number(id) < 100 ? this.directlyInterVideo : this.goToWeiChatPay
+              Number(id) < 3 ? this.directlyInterVideo : this.goToWeiChatPay
             }
           >
             <i className="producer-icon video-sprite"></i>
@@ -87,7 +87,7 @@ class VideoDetail extends React.Component {
             badge: true,
             'badge-accented': true,
             coral: true,
-            xianmian: Number(id) < 100
+            xianmian: Number(id) < 3
           })}
         >
           <span className="badge-text">限免 hot &amp; New</span>
