@@ -147,7 +147,7 @@ class WeiChatPay extends React.Component {
               fontSize: '13px'
             }}
           >
-            提示视频购买后，可以在48小时之内无限次重复观看本片
+            视频购买后，可以在48小时之内无限次重复观看本片
           </span>
         </div>
 

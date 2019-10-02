@@ -74,7 +74,7 @@ class AppRouter extends React.Component {
 
       response.data.unshift({ dictName: '全部', dictVal: '0', sort: 0 })
 
-      response.data.unshift({ dictName: '购买记录', dictVal: '-1', sort: -1 })
+      response.data.unshift({ dictName: '购买记录(48小时内)', dictVal: '-1', sort: -1 })
 
       this.setState({
         videoType: response.data
