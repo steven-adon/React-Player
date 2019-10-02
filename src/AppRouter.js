@@ -13,6 +13,8 @@ import classNames from 'classnames'
 
 import { saveSelectVideoType, saveShareCode } from './actions'
 
+import uuid from 'uuid/v1'
+
 import $ from 'jquery'
 
 class AppRouter extends React.Component {
@@ -41,6 +43,27 @@ class AppRouter extends React.Component {
   componentDidMount() {
     let shareCode = this.getUrlParams('code')
     this.props.saveShareCode(shareCode)
+
+    // 进入项目的时候判断本地存储中是否有user
+    if(window.localStorage.getItem('userVideo')) {
+      // 如果有的则取到原来的值，把这个值添加到
+      let userInfo = JSON.parse(window.localStorage.getItem('userVideo'))
+      console.log('含有', userInfo)
+    }else{
+      // 如果没有，则开始写入一个新的值
+      // 生成用户唯一标识
+      let userId = uuid();
+      console.log(userId)
+
+      let userInfo = {
+        userId: userId,
+        viewedList: [
+        ]
+      }
+
+      window.localStorage.setItem('userVideo', JSON.stringify(userInfo))
+    }
+
     // history.push('/')
     ;(async () => {
       const response = await fetch.get(`/video/sysconfig`, {

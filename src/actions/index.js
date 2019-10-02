@@ -36,6 +36,17 @@ export const queryServerPayStatus = () => async (dispatch, getState) => {
 
   if(response.hasOwnProperty('pay_status')) {
     if(response['pay_status'] === '已支付') {
+      let timestamp = Date.parse(new Date()) + 172800000;
+      let videoPay = {
+        videoId: videoItem.id,
+        validityPeriod: timestamp
+      }
+
+      let userInfo = JSON.parse(window.localStorage.getItem('userVideo'))
+      userInfo.viewedList.push(videoPay)
+      window.localStorage.setItem('userVideo', JSON.stringify(userInfo))
+      debugger
+
       history.push(`/play/${videoItem.id}`)
     }
   }
