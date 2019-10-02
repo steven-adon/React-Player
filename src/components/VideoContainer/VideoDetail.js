@@ -13,8 +13,29 @@ class VideoDetail extends React.Component {
   }
 
   goToWeiChatPay = () => {
-    this.props.saveVideoId(this.props.videoItem)
-    this.props.history.push(`/weiChatPay`)
+    // 判断这个该用户是否先前看过这个视频
+    if(window.localStorage.getItem('userVideo')) {
+      let userInfo = JSON.parse(window.localStorage.getItem('userVideo'))
+      let { viewedList } = userInfo
+      let timestamp = Date.parse(new Date());
+      let finalArr = viewedList.filter((item) => {
+        if(item.videoId == this.props.videoItem.id && timestamp < item.validityPeriod) {
+          return true
+        }else{
+          return false
+        }
+      })
+
+      if(finalArr.length > 0) {
+        this.props.history.push(`/play/${this.props.videoItem.id}`)
+      }else{
+        this.props.saveVideoId(this.props.videoItem)
+        this.props.history.push(`/weiChatPay`)
+      }
+    }else{
+      this.props.saveVideoId(this.props.videoItem)
+      this.props.history.push(`/weiChatPay`)
+    }
   }
 
   directlyInterVideo = () => {
@@ -25,6 +46,25 @@ class VideoDetail extends React.Component {
     const { videoItem } = this.props
 
     const { id, views, likes, duration, videoDesc, imgUrl, price } = videoItem
+
+    let isViewed = false;
+
+    if(window.localStorage.getItem('userVideo')) {
+      let userInfo = JSON.parse(window.localStorage.getItem('userVideo'))
+      let { viewedList } = userInfo
+      let timestamp = Date.parse(new Date());
+      let finalArr = viewedList.filter((item) => {
+        if(item.videoId == this.props.videoItem.id && timestamp < item.validityPeriod) {
+          return true
+        }else{
+          return false
+        }
+      })
+
+      if (finalArr.length > 0) {
+        isViewed = true
+      }
+    }
 
     return (
       <div className="positionRelative videoWrapper" key={id}>
@@ -72,7 +112,11 @@ class VideoDetail extends React.Component {
             }
           >
             <i className="producer-icon video-sprite"></i>
-            <span>立即观看</span>
+            <span> {
+              isViewed
+             ? <span style={{ color: 'green' }}>进行回看</span> :
+              <span>立即观看</span>
+            } </span>
           </div>
 
           <div className="duration thumbOverlay inUserStream hidden">

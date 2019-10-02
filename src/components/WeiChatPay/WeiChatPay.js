@@ -143,6 +143,17 @@ class WeiChatPay extends React.Component {
         <div style={{ marginTop: '20px', marginBottom: '20px' }}>
           <span
             style={{
+              color: 'red',
+              fontSize: '13px'
+            }}
+          >
+            提示视频购买后，可以在48小时之内无限次重复观看本片
+          </span>
+        </div>
+
+        <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+          <span
+            style={{
               color: '#f90',
               fontSize: '13px'
             }}
