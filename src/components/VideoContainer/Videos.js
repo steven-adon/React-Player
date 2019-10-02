@@ -73,14 +73,41 @@ const Videos = props => {
 
   useEffect(() => {
     ;(async () => {
+      // eslint-disable-next-line
       const response = await fetch.get(`/video/pageList`, {
         params: {
           group: curentPage,
-          videoType: props.videoSelectType
+          // eslint-disable-next-line
+          videoType: props.videoSelectType == '-1' ? 0  : props.videoSelectType
         }
       })
-      setResources(response.data.records)
-      setPageCount(response.data.total)
+      // eslint-disable-next-line
+      if(props.videoSelectType == '-1') {
+        let userInfo = JSON.parse(window.localStorage.getItem('userVideo'))
+
+        let finalVideo = response.data.records.filter((item) => {
+          let flagArr = userInfo.viewedList.filter((filterItem) => {
+            let timestamp = Date.parse(new Date());
+            // eslint-disable-next-line
+            if(timestamp < filterItem.validityPeriod && filterItem.videoId == item.id) {
+              return true
+            }else{
+              return false
+            }
+          })
+          if(flagArr.length > 0) {
+            return true
+          }else{
+            return false
+          }
+        })
+
+        setResources(finalVideo)
+        setPageCount(finalVideo.length)
+      }else{
+        setResources(response.data.records)
+        setPageCount(response.data.total)
+      }
       $('body,html').animate({ scrollTop: 0 }, 500)
     })()
   }, [curentPage, props.videoSelectType])

@@ -19,6 +19,7 @@ class VideoDetail extends React.Component {
       let { viewedList } = userInfo
       let timestamp = Date.parse(new Date());
       let finalArr = viewedList.filter((item) => {
+        // eslint-disable-next-line
         if(item.videoId == this.props.videoItem.id && timestamp < item.validityPeriod) {
           return true
         }else{
@@ -54,6 +55,7 @@ class VideoDetail extends React.Component {
       let { viewedList } = userInfo
       let timestamp = Date.parse(new Date());
       let finalArr = viewedList.filter((item) => {
+        // eslint-disable-next-line
         if(item.videoId == this.props.videoItem.id && timestamp < item.validityPeriod) {
           return true
         }else{
