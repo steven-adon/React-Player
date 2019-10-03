@@ -39,7 +39,7 @@ const VideoPlayer = props => {
               <iframe
                 title="This is a unique title"
                 className="sproutvideo-player"
-                src={`https://videos.sproutvideo.com/embed/${video.videoUrl}?autoPlay=true`}
+                src={`https://videos.sproutvideo.com/embed/${video.videoUrl}`}
                 height="240px"
                 frameBorder="0"
                 allowFullScreen
